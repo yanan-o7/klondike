@@ -7,4 +7,4 @@ _Дютина Я.А. ТРПО24-3_
 
 ### Игра
 
-<img width="395" alt="Снимок экрана 2024-10-23 в 9 05 03 PM" src="https://github.com/user-attachments/assets/2d73b92e-959d-4ca6-a4cf-04e5dd379626">
+![klondike](https://github.com/user-attachments/assets/2d73b92e-959d-4ca6-a4cf-04e5dd379626)
