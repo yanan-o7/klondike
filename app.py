@@ -1,13 +1,15 @@
 import random
 
-#Вводим игроков в игру
-#(игроки вводят свои псевдонимы)
+"""
+Вводим игроков в игру (игроки вводят свои псевдонимы)
+"""
 player_one = input('Write your nickname:\n')
 player_two = input('Write your nickname:\n')
 player = 1
 
-#Создаём поле для игры
-#(заполняем поле 10 на 10 "*", когда игрок будет ставить метку, "*" будет заменяться на "Х")
+"""
+Создаём поле для игры (заполняем поле 10 на 10 "*", когда игрок будет ставить метку, "*" будет заменяться на "Х")
+"""
 no_hit = '*'
 hit = 'X'
 game_board = []
@@ -17,7 +19,9 @@ for width in range (10):
         game_board_mini.append(no_hit)
     game_board.append(game_board_mini)
 
-#Выбираем, кто начнёт
+"""
+Выбираем, кто начнёт
+"""
 coin_flip = [player_one, player_two]
 rng = random.choice(coin_flip)
 print(rng, '- you start, you are player 1\n')
@@ -25,8 +29,9 @@ print(rng, '- you start, you are player 1\n')
 print('Playing board:')
 print(*game_board, sep='\n')
 
-#Определяем ВСЕ варианты проигрыша
-#(для каждой клетки с отметкой проверяем, что нет цепочек из 3 клеток с отметками)
+"""
+Определяем ВСЕ варианты проигрыша (для каждой клетки с отметкой проверяем, что нет цепочек из 3 клеток с отметками)
+"""
 def end(game_board):
     line_3 = 0
     if (game_board[0][0] == hit == game_board[1][0] == game_board[2][1] or game_board[0][0] == hit == game_board[0][1] == game_board[0][2] or game_board[0][0] == hit == game_board[1][1] == game_board[2][2] or
@@ -128,7 +133,9 @@ def end(game_board):
         line_3 = 1
     return line_3
 
-#Проверка правильности ввода чисел
+"""
+Проверка правильности ввода чисел
+"""
 def line_check():
     try:
         line = int(input('Chose the line: '))
@@ -144,8 +151,9 @@ def row_check():
         print('Write in numbers please')
         return row_check()
 
-#Ход игры
-#(пока на поле нет цепочек из 3 отметок, игроки по очереди ставят метки, а игрок, создавший цепочку, – проигрывает)
+"""
+Ход игры (пока на поле нет цепочек из 3 отметок, игроки по очереди ставят метки, а игрок, создавший цепочку, – проигрывает)
+"""
 while not end(game_board):
     my_line = line_check()
     my_row = row_check()
