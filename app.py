@@ -34,7 +34,7 @@ print(*game_board, sep='\n')
 """
 def end(game_board):
     line_3 = 0
-    if (game_board[0][0] == hit == game_board[1][0] == game_board[2][1] or game_board[0][0] == hit == game_board[0][1] == game_board[0][2] or game_board[0][0] == hit == game_board[1][1] == game_board[2][2] or
+    if (game_board[0][0] == hit == game_board[0][1] == game_board[0][2] or game_board[0][0] == hit == game_board[1][0] == game_board[2][0] or game_board[0][0] == hit == game_board[1][1] == game_board[2][2] or
         game_board[1][0] == hit == game_board[1][1] == game_board[1][2] or game_board[1][0] == hit == game_board[2][0] == game_board[3][0] or game_board[1][0] == hit == game_board[2][1] == game_board[3][2] or
         game_board[2][0] == hit == game_board[2][1] == game_board[2][2] or game_board[2][0] == hit == game_board[3][0] == game_board[4][0] or game_board[2][0] == hit == game_board[3][1] == game_board[4][2] or
         game_board[3][0] == hit == game_board[3][1] == game_board[3][2] or game_board[3][0] == hit == game_board[4][0] == game_board[5][0] or game_board[3][0] == hit == game_board[4][1] == game_board[5][2] or
